@@ -1,0 +1,19 @@
+.navbar-dark {
+  background-color: #212529 !important; /* Darker shade for modern look */
+}
+
+.navbar-dark .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff !important;
+}
+
+.navbar-dark .nav-link {
+  font-size: 1.1rem;
+  color: #bbbbbb !important;
+  transition: color 0.2s ease-in-out;
+}
+
+.navbar-dark .nav-link:hover {
+  color: #ffffff !important;
+}

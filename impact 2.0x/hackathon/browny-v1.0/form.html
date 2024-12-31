@@ -1,0 +1,409 @@
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MigraineZ</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js" integrity="sha512-nIwdJlD5/vHj23CbO2iHCXtsqzdTTx3e3uAmpTm4x2Y8xCIFyWu4cSIV8GaGe2UNVq86/1h9EgUZy7tn243qdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFFFFF;
+            color: #333;
+            line-height: 1.4;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #4682B4;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-weight: bold;
+            color: #4682B4;
+            margin-bottom: 3px;
+            font-size: 0.9em;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ADD8E6;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus, input[type="number"]:focus {
+            outline: none;
+            border-color: #4682B4;
+        }
+        input[type="submit"] {
+            background-color: #4682B4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            grid-column: span 2;
+            margin-top: 15px;
+        }
+        input[type="submit"]:hover {
+            background-color: #2155bc;
+        }
+        #prediction {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+            color: #2155bc;
+            font-size: 1em;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #ADD8E6;
+            border-radius: 5px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+        .progress {
+            width: 0%;
+            height: 100%;
+            background-color:#2155bc;
+            transition: width 0.5s ease-in-out;
+        }
+        @media (max-width: 600px) {
+            form {
+                grid-template-columns: 1fr;
+            }
+            input[type="submit"] {
+                grid-column: span 1;
+            }
+            .container {
+                padding: 20px;
+            }
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: help;
+            margin-left: 5px;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+        .info-icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-color: #2155bc;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 16px;
+            font-size: 12px;
+            font-weight: bold;
+    </style>
+</head>
+<body>
+    <div class="container" x-data="formData()">
+        <h1>MigraineZ Symptom Form</h1>
+        <form id="symptom-form" @submit.prevent="submitForm">
+            <div class="form-group">
+                <label for="age">Age:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Please enter your current age in years.</span>
+                    </span>
+                </label>
+                <input type="number" id="age" x-model="age" required>
+            </div>
+            <div class="form-group">
+                <label for="duration">Duration:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">How long does your typical migraine last? (e.g., 4 hours, 2 days)</span>
+                    </span>
+                </label>
+                <input type="text" id="duration" x-model="duration" required>
+            </div>
+            <div class="form-group">
+                <label for="frequency">Frequency:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">How often do you experience migraines? (e.g., 2 times per week, 3 times per month)</span>
+                    </span>
+                </label>
+                <input type="text" id="frequency" x-model="frequency" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Where do you feel the pain? (e.g., one side of head, behind eyes)</span>
+                    </span>
+                </label>
+                <input type="text" id="location" x-model="location" required>
+            </div>
+            <div class="form-group">
+                <label for="character">Character:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Describe the type of pain (e.g., throbbing, sharp, dull)</span>
+                    </span>
+                </label>
+                <input type="text" id="character" x-model="character" required>
+            </div>
+            <div class="form-group">
+                <label for="intensity">Intensity:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Rate the pain intensity from 1 (mild) to 10 (severe)</span>
+                    </span>
+                </label>
+                <input type="text" id="intensity" x-model="intensity" required>
+            </div>
+            <div class="form-group">
+                <label for="nausea">Nausea:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Do you experience nausea during migraines? (Yes/No)</span>
+                    </span>
+                </label>
+                <input type="text" id="nausea" x-model="nausea" required>
+            </div>
+            <div class="form-group">
+                <label for="vomit">Vomit:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Do you vomit during migraines? (Yes/No)</span>
+                    </span>
+                </label>
+                <input type="text" id="vomit" x-model="vomit" required>
+            </div>
+            <div class="form-group">
+                <label for="phonophobia">Phonophobia:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Are you sensitive to sound during migraines? (Yes/No)</span>
+                    </span>
+                </label>
+                <input type="text" id="phonophobia" x-model="phonophobia" required>
+            </div>
+            <div class="form-group">
+                <label for="photophobia">Photophobia:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Are you sensitive to light during migraines? (Yes/No)</span>
+                    </span>
+                </label>
+                <input type="text" id="photophobia" x-model="photophobia" required>
+            </div>
+            <div class="form-group">
+                <label for="visual">Visual:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Do you experience visual disturbances? (e.g., flashing lights, blind spots)</span>
+                    </span>
+                </label>
+                <input type="text" id="visual" x-model="visual" required>
+            </div>
+            <div class="form-group">
+                <label for="sensory">Sensory:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Do you experience any sensory symptoms? (e.g., numbness, tingling)</span>
+                    </span>
+                </label>
+                <input type="text" id="sensory" x-model="sensory" required>
+            </div>
+            <div class="form-group">
+                <label for="dysphasia">Dysphasia:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Do you have difficulty speaking or understanding speech? (Yes/No)</span>
+                    </span>
+                </label>
+                <input type="text" id="dysphasia" x-model="dysphasia" required>
+            </div>
+            <div class="form-group">
+                <label for="dysarthria">Dysarthria:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Do you experience slurred or slow speech? (Yes/No)</span>
+                    </span>
+                </label>
+                <input type="text" id="dysarthria" x-model="dysarthria" required>
+            </div>
+            <div class="form-group">
+                <label for="vertigo">Vertigo:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Do you experience a spinning sensation? (Yes/No)</span>
+                    </span>
+                </label>
+                <input type="text" id="vertigo" x-model="vertigo" required>
+            </div>
+            <div class="form-group">
+                <label for="tinnitus">Tinnitus:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Do you hear ringing or buzzing in your ears? (Yes/No)</span>
+                    </span>
+                </label>
+                <input type="text" id="tinnitus" x-model="tinnitus" required>
+            </div>
+            <div class="form-group">
+                <label for="hypoacusis">Hypoacusis:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Do you experience reduced hearing ability? (Yes/No)</span>
+                    </span>
+                </label>
+                <input type="text" id="hypoacusis" x-model="hypoacusis" required>
+            </div>
+            <div class="form-group">
+                <label for="diplopia">Diplopia:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Do you experience double vision? (Yes/No)</span>
+                    </span>
+                </label>
+                <input type="text" id="diplopia" x-model="diplopia" required>
+            </div>
+            <div class="form-group">
+                <label for="defect">Defect:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Do you experience any visual field defects? (Yes/No)</span>
+                    </span>
+                </label>
+                <input type="text" id="defect" x-model="defect" required>
+            </div>
+            <div class="form-group">
+                <label for="ataxia">Ataxia:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Do you experience loss of muscle coordination? (Yes/No)</span>
+                    </span>
+                </label>
+                <input type="text" id="ataxia" x-model="ataxia" required>
+            </div>
+            <div class="form-group">
+                <label for="conscience">Conscience:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Do you experience any changes in consciousness? (e.g., confusion, disorientation)</span>
+                    </span>
+                </label>
+                <input type="text" id="conscience" x-model="conscience" required>
+            </div>
+            <div class="form-group">
+                <label for="paresthesia">Paresthesia:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Do you experience tingling or prickling sensations? (Yes/No)</span>
+                    </span>
+                </label>
+                <input type="text" id="paresthesia" x-model="paresthesia" required>
+            </div>
+            <div class="form-group">
+                <label for="dpf">DPF:
+                    <span class="tooltip">
+                        <span class="info-icon">i</span>
+                        <span class="tooltiptext">Do you have a family history of migraines? (Yes/No)</span>
+                    </span>
+                </label>
+                <input type="text" id="dpf" x-model="dpf" required>
+            </div>
+            <input type="submit" value="Predict">
+        </form>
+
+        <div id="prediction">
+            <!-- Prediction result will be displayed here -->
+        </div>
+
+        <div class="progress-bar">
+            <div class="progress" x-bind:style="{ width: progress + '%' }"></div>
+        </div>
+    </div>
+
+    <script>
+        function formData() {
+            return {
+                age: '',
+                duration: '',
+                frequency: '',
+                location: '',
+                character: '',
+                intensity: '',
+                nausea: '',
+                vomit: '',
+                phonophobia: '',
+                photophobia: '',
+                visual: '',
+                sensory: '',
+                dysphasia: '',
+                dysarthria: '',
+                vertigo: '',
+                tinnitus: '',
+                hypoacusis: '',
+                diplopia: '',
+                defect: '',
+                ataxia: '',
+                conscience: '',
+                paresthesia: '',
+                dpf: '',
+                progress: 0,
+                submitForm() {
+                    this.progress = 0;
+                    let interval = setInterval(() => {
+                        if (this.progress < 100) {
+                            this.progress += 10;
+                        } else {
+                            clearInterval(interval);
+                            // Call your Flask API or any other service here to get the prediction
+                            // After receiving the prediction result, update the #prediction element
+                            document.getElementById('prediction').innerText = "Prediction: Positive";
+                        }
+                    }, 100);
+                }
+            };
+        }
+    </script>
