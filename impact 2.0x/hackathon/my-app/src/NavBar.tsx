@@ -13,7 +13,7 @@ function NavBar() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link as={HashLink} smooth to="/home#1-on-1">1-ON-1</Nav.Link>
+              <Nav.Link as={HashLink} smooth to="/home#one-on-one">1-ON-1</Nav.Link>
               <Nav.Link as={HashLink} smooth to="/home#migraine-checker">MIGRAINE CHECKER</Nav.Link>
               <Nav.Link as={HashLink} smooth to="/home#education-content">EDUCATION CONTENT</Nav.Link>
               <Nav.Link as={HashLink} smooth to="/home#articles">ARTICLES</Nav.Link>
