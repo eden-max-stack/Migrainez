@@ -192,93 +192,309 @@ export const Home = () => {
 	</div>
 </section>
 
+<section id="community-support" className="profiles" style={{padding: "60px 0"}}>
+    <div className="profiles-details">
+        <div className="section-heading text-center">
+            <h2 style={{marginBottom: "40px", fontSize: "36px", fontWeight: "700"}}>community support</h2>
+        </div>
+        <div className="container">
+            <div className="profiles-content" style={{margin: "0 -15px"}}>
+                <div className="row">
 
-    <div id="community-support">
-      <h2>COMMUNITY SUPPORT</h2>
-      <div className="webpages">
-        <img src="../public/themigrainetrust.jpg" alt="" />
-        <img src="../public/migrainecom.jpg" alt="" />
-        <img src="../public/reddit.jpg" alt="" />
-        <img src="../public/migrainewarrior.jpg" alt="" />
-        <img src="../public/facebook.jpg" alt="" />
-        <img src="../public/american_migraine_foundation.jpg" alt="" />
-        <img src="../public/healthunlocked.jpg" alt="" />
-        <img src="../public/migraineaction.jpg" alt="" />
-      </div>
+                    <div className="col-sm-3" style={{padding: "0 15px"}}>
+                        <div className="single-profile">
+                            <a href="https://migrainetrust.org/" target="_blank" style={{display: "block"}}>
+                                <img src="../public/themigraninetrust.jpg" alt="Migrainetrust" style={{width: "100%", height: "auto"}} />
+                            </a>
+                        </div>
+                    </div>
+
+                    <div className="col-sm-3" style={{padding: "0 15px"}}>
+                        <div className="single-profile">
+                            <a href="https://migraine.com/" target="_blank" style={{display: "block"}}>
+                                <img src="../public/migrainecom.jpg" alt="Migraine.com" style={{width: "100%", height: "auto"}} />
+                            </a>
+                        </div>
+                    </div>
+                    <div className="col-sm-3" style={{padding: "0 15px"}}>
+                        <div className="single-profile">
+                            <a href="https://www.reddit.com/r/migraine/" target="_blank" style={{display: "block"}}>
+                                <img src="../public/reddit.jpg" alt="Reddit" style={{width: "100%", height: "auto"}} />
+                            </a>
+                        </div>
+                    </div>
+                    <div className="col-sm-3" style={{padding: "0 15px"}}>
+                        <div className="single-profile">
+                            <a href="https://www.facebook.com/groups/migrainewarriors/" target="_blank" style={{display: "block"}}>
+                                <img src="../public/migrainewarrior.jpg" alt="Migraine Warriors" style={{width: "100%", height: "auto"}} />
+                            </a>
+                        </div>
+                    </div>
+
+                    
+                <div className="profile-border" style={{margin: "40px 0", borderTop: "1px solid #ddd"}}></div>
+                </div>
+                <div className="row">
+
+                <div className="col-sm-3" style={{padding: "0 15px"}}>
+                        <div className="single-profile">
+                            <a href="https://www.facebook.com/groups/chronicmigraine/" target="_blank" style={{display: "block"}}>
+                                <img src="../public/facebook.jpg" alt="Chronic Migraine" style={{width: "100%", height: "auto"}} />
+                            </a>
+                        </div>
+                </div>
+
+                <div className="col-sm-3" style={{padding: "0 15px"}}>
+                        <div className="single-profile">
+                            <a href="https://americanmigrainefoundation.org/" target="_blank" style={{display: "block"}}>
+                                <img src="../public/american_migraine_foundation.jpg" alt="American Migraine Foundation" style={{width: "100%", height: "auto"}} />
+                            </a>
+                        </div>
+                </div>
+                <div className="col-sm-3" style={{padding: "0 15px"}}>
+                        <div className="single-profile">
+                            <a href="https://healthunlocked.com/" target="_blank" style={{display: "block"}}>
+                                <img src="../public/healthunlocked.jpg" alt="HealthUnlocked" style={{width: "100%", height: "auto"}} />
+                            </a>
+                        </div>
+                </div>
+                <div className="col-sm-3" style={{padding: "0 15px"}}>
+                        <div className="single-profile">
+                            <a href="https://www.migraineaction.com/" target="_blank" style={{display: "block"}}>
+                                <img src="../public/migraineaction.jpg" alt="Migraine Buddy" style={{width: "100%", height: "auto"}} />
+                            </a>
+                        </div>
+                </div>
+
+
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="treatment">
-      <h2>TREATMENT OPTIONS</h2>
-      <div className="treatment-options">
-        <img src="../public/therpy.jpg" alt="" />
-        <img src="../public/lifestyle.jpg" alt="" />
-        <img src="../public/devices.jpg" alt="" />
-        <img src="../public/personal.jpg" alt="" />
-        <img src="../public/medication.jpg" alt="" />
-      </div>
-    </div>
-    <div id="contact-us">
-      <h2>CONTACT INFORMATION</h2>
-      <div>
-        <h2>SAHIL ALI AKBAR</h2>
-        <h3>B.Tech CSE AIML</h3>
-        <h4>Phone</h4>
-        <h5>9133751494</h5>
-        <h4>Email</h4>
-        <h5>sa4612@srmist.edu.in</h5>
-        <h4>Registration No.</h4>
-        <h5>RA2211026010057</h5>
-        <h4>Department</h4>
-        <h5>CINTEL</h5>
-      </div>
-      <div>
-        <h2>AMARNATH KOLLA</h2>
-        <h3>B.Tech CSE CC</h3>
-        <h4>Phone</h4>
-        <h5>9030388269</h5>
-        <h4>Email</h4>
-        <h5>ak4909@srmist.edu.in</h5>
-        <h4>Registration No.</h4>
-        <h5>RA2211028010157</h5>
-        <h4>Department</h4>
-        <h5>NWC</h5>
-      </div>
-      <div>
-        <h2>J ABHIRAM VARMA</h2>
-        <h3>B.Tech CSE CC</h3>
-        <h4>Phone</h4>
-        <h5>8317689145</h5>
-        <h4>Email</h4>
-        <h5>aj0232@srmist.edu.in</h5>
-        <h4>Registration No.</h4>
-        <h5>RA2211028010174</h5>
-        <h4>Department</h4>
-        <h5>NWC</h5>
-      </div>
-      <div>
-        <h2>DEEPSHIKHA SHAKSHI</h2>
-        <h3>MTech Integ CSE Cog Comp</h3>
-        <h4>Phone</h4>
-        <h5>7877395130</h5>
-        <h4>Email</h4>
-        <h5>ds8182@srmist.edu.in</h5>
-        <h4>Registration No.</h4>
-        <h5>RA2212702010034</h5>
-        <h4>Department</h4>
-        <h5>CINTEL</h5>
-      </div>
-      <div>
-        <h2>H B AKSHADA KASHYAP</h2>
-        <h3>B.Tech CSE</h3>
-        <h4>Phone</h4>
-        <h5>8056032332</h5>
-        <h4>Email</h4>
-        <h5>hk2762@srmist.edu.in</h5>
-        <h4>Registration No.</h4>
-        <h5>RA2211003011777</h5>
-        <h4>Department</h4>
-        <h5>CTECH</h5>
-      </div>
-    </div>
+</section>
+
+
+<section id="treatment" className="portfolio">
+			<div className="portfolio-details">
+				<div className="section-heading text-center">
+					<h2>Treatment Options</h2>
+				</div>
+				<div className="container">
+					<div className="portfolio-content">
+						<div className="isotope">
+							<div className="row">
+
+								<div className="col-sm-4">
+									<div className="item">
+										<img src="../public/medication.jpg" alt="portfolio image"/>
+										<div className="isotope-overlay">
+											<a href="#">
+												medication
+											</a>
+										</div>
+									</div>
+									<div className="item">
+										<img src="../public/lifestyle.jpg" alt="portfolio image"/>
+										<div className="isotope-overlay">
+											<a href="#">
+												Lifestyle Changes
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div className="col-sm-4">
+									<div className="item">
+										<img src="../public/personal.jpg" alt="portfolio image"/>
+										<div className="isotope-overlay">
+											<a href="#">
+												Complementary Approaches
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div className="col-sm-4">
+									<div className="item">
+										<img src="../public/therpy.jpg" alt="portfolio image"/>
+										<div className="isotope-overlay">
+											<a href="#">
+												Alternative Therapies
+											</a>
+										</div>
+									</div>
+									<div className="item">
+										<img src="../public/devices.jpg" alt="portfolio image"/>
+										<div className="isotope-overlay">
+											<a href="#">
+												medical devices
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+
+        <section id="contact-us" className="contact">
+			<div className="section-heading text-center">
+				<h2>Contact Information</h2>
+			</div>
+			<div className="container">
+				<div className="contact-content">
+					<div className="row">
+						<div className="col-md-3 col-sm-12">
+							<div className="single-contact-box">
+								<div className="contact-address">
+									<div className="contact-add-head">
+										<h3>Sahil Ali Akbar</h3>
+										<p>B.Tech CSE AMIL</p>
+									</div>
+									<div className="contact-add-info">
+										<div className="single-contact-add-info">
+											<h3>Phone</h3>
+											<p>9133751494</p>
+										</div>
+										<div className="single-contact-add-info">
+											<h3>Email</h3>
+											<p><a href="mailto:sa4612@srmist.edu.in">sa4612@srmist.edu.in</a></p>
+										</div>
+										<div className="single-contact-add-info">
+											<h3>Registration Number</h3>
+											<p>RA2211026010057</p>
+										</div>
+										<div className="single-contact-add-info">
+											<h3>Department</h3>
+											<p>CINTEL</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div className="col-md-3 col-sm-12">
+							<div className="single-contact-box">
+								<div className="contact-address">
+									<div className="contact-add-head">
+										<h3>Amarnath Kolla</h3>
+										<p>B.Tech CSE CC</p>
+									</div>
+									<div className="contact-add-info">
+										<div className="single-contact-add-info">
+											<h3>Phone</h3>
+											<p>9030388269</p>
+										</div>
+										<div className="single-contact-add-info">
+											<h3>Email</h3>
+											<p><a href="mailto:ak4909@srmist.edu.in">ak4909@srmist.edu.in</a></p>
+										</div>
+										<div className="single-contact-add-info">
+											<h3>Registration Number</h3>
+											<p>RA2211028010157</p>
+										</div>
+										<div className="single-contact-add-info">
+											<h3>Department</h3>
+											<p>NWC</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+		
+						<div className="col-md-3 col-sm-12">
+							<div className="single-contact-box">
+								<div className="contact-address">
+									<div className="contact-add-head">
+										<h3>J Abhiram Varma</h3>
+										<p>B.Tech CSE CC</p>
+									</div>
+									<div className="contact-add-info">
+										<div className="single-contact-add-info">
+											<h3>Phone</h3>
+											<p>8317689145</p>
+										</div>
+										<div className="single-contact-add-info">
+											<h3>Email</h3>
+											<p><a href="mailto:aj0232@srmist.edu.in">aj0232@srmist.edu.in</a></p>
+										</div>
+										<div className="single-contact-add-info">
+											<h3>Registration Number</h3>
+											<p>RA2211028010174</p>
+										</div>
+										<div className="single-contact-add-info">
+											<h3>Department</h3>
+											<p>NWC</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div className="col-md-3 col-sm-12">
+							<div className="single-contact-box">
+								<div className="contact-address">
+									<div className="contact-add-head">
+										<h3>Deepshikha Shakshi</h3>
+										<p>MTech Integ CSE Cog Comp</p>
+									</div>
+									<div className="contact-add-info">
+										<div className="single-contact-add-info">
+											<h3>Phone</h3>
+											<p>7877395130</p>
+										</div>
+										<div className="single-contact-add-info">
+											<h3>Email</h3>
+											<p><a href="mailto:ds8182@srmist.edu.in">ds8182@srmist.edu.in</a></p>
+										</div>
+										<div className="single-contact-add-info">
+											<h3>Registration Number</h3>
+											<p>RA2212702010034</p>
+										</div>
+										<div className="single-contact-add-info">
+											<h3>Department</h3>
+											<p>CINTEL</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div className="col-md-3 col-sm-12">
+							<div className="single-contact-box">
+								<div className="contact-address">
+									<div className="contact-add-head">
+										<h3>Akshada Kashyap</h3>
+										<p>BTech CSE</p>
+									</div>
+									<div className="contact-add-info">
+										<div className="single-contact-add-info">
+											<h3>Phone</h3>
+											<p>8056032332</p>
+										</div>
+										<div className="single-contact-add-info">
+											<h3>Email</h3>
+											<p><a href="mailto:hk2762@srmist.edu.in">hk2762@srmist.edu.in</a></p>
+										</div>
+										<div className="single-contact-add-info">
+											<h3>Registration Number</h3>
+											<p>RA2211003011777</p>
+										</div>
+										<div className="single-contact-add-info">
+											<h3>Department</h3>
+											<p>CTECH</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
     </>
   )
 }
