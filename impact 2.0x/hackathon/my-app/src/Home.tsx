@@ -1,7 +1,14 @@
 import React from 'react';
 import './Home.css';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const Home = () => {
+	const navigate = useNavigate();
+
+	const handleMigraineDetection = () => {
+		navigate('/bookappointment');
+	}
 
   return (
     <>
@@ -53,7 +60,7 @@ export const Home = () => {
                                 </div>
                             </div>
                         </div>
-                        <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#appointmentModal">
+                        <button type="button" className="btn btn-primary" onClick={handleMigraineDetection} data-toggle="modal" data-target="#appointmentModal">
                             Book 1-to-1 Appointment
                         </button>
                     </div>
@@ -77,10 +84,21 @@ export const Home = () => {
         <p style={{fontSize: "18px", color: "#555", marginBottom: "30px"}}>
             Check out our latest Deep Learning Algorithm to Check Migraine.
         </p>
-        <a href="../browny-v1.0/form.html" class="btn btn-primary btn-lg" role="button" 
-           style={{backgroundColor: "#007bff", border: "none", padding: "15px 30px", fontSize: "18px", color: "#fff", textTransform: "uppercase", boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)"}}>
-            Fill Out the Form
-        </a>
+        <Link 
+        to="/detectmigraine" 
+        className="btn btn-primary btn-lg" 
+        style={{
+            backgroundColor: "#007bff", 
+            border: "none", 
+            padding: "15px 30px", 
+            fontSize: "18px", 
+            color: "#fff", 
+            textTransform: "uppercase", 
+            boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)"
+        }}
+    >
+        Fill Out the Form
+    </Link>
     </div>
     </section>
 
