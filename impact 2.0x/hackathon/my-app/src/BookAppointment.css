@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFFFF;
+    color: #333;
+    line-height: 1.4;
+    padding: 20px;
+    margin: 0;
+}
+.heading {
+    padding-top: 100px;
+    text-align: center;
+}
+
+input {
+    background-color: #fff;
+    color: #242424;
+}
+
+.formGroup {
+    width: 95vw;
+    height: 70vh;
+    left: 0;
+    top: 0;
+    padding: 40px;
+    max-width: 100%;
+    justify-content: flex-end;
+}
+
+label {
+    font-weight: bold;
+    color: #4682B4;
+    margin-bottom: 3px;
+    font-size: 0.9em;
+}
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ADD8E6;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+input[type="text"]:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: #4682B4;
+}
+
+input[type="tel"], input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ADD8E6;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+input[type="tel"]:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: #4682B4;
+}
+input[type="submit"] {
+    background-color: #4682B4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    grid-column: span 2;
+    margin-top: 15px;
+}
+input[type="submit"]:hover {
+    background-color: #2155bc;
+}
+
+.bookAppointment {
+    text-align: left; /* Align the button to the right */
+}
+
+.bookAppointment button {
+    background-color: #2155bc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.bookAppointment button:hover {
+    background-color: #003c8f;
+}

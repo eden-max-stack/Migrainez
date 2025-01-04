@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     position:relative;
-    background:url(../oublic/welcome-banner.jpg)no-repeat;
+    background:url(../public/welcome-banner.jpg)no-repeat;
     background-size:cover;
     background-position: center;
     height:890px;

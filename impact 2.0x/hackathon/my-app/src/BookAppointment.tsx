@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import './BookAppointment.css';
 
 const BookAppointment: React.FC = () => {
   const [name, setName] = useState('');
@@ -28,7 +29,8 @@ const BookAppointment: React.FC = () => {
   return (
     <>
     <div>
-      <h2>Book Appointment</h2>
+      <div className="heading"><h2>Book Appointment</h2></div>
+      <div className="formGroup">
       <form onSubmit={handleSubmit}>
         <label htmlFor='name'>Name: </label>
         <input
@@ -66,10 +68,13 @@ const BookAppointment: React.FC = () => {
           required
         />
 
+        <div className="bookAppointment">
         <button type="submit">
           Book
         </button>
+        </div>
       </form>
+      </div>
     </div>
     </>
   );

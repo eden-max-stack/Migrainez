@@ -67,7 +67,7 @@ const DetectMigraine: React.FC = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container">  
         <div className="heading">
         <h1 >Predict Migraine</h1>
         </div>

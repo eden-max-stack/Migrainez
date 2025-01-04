@@ -113,7 +113,7 @@ export const Home = () => {
                 <div className="col-md-6 mb-4">
                     <div className="video-wrapper">
                         <div className="embed-responsive embed-responsive-16by9 rounded border">
-                            <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/oBvGbn1MuPU" allowFullScreen></iframe>
+                            <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/oBvGbn1MuPU" allowFullScreen style={{display: "block", margin: "0 auto", border: "1px solid #ccc" }}></iframe>
                         </div>
                         <h3 className="mt-2 mb-3 text-center" style={{marginBottom: "20px"}}>Understanding Migraines - Causes and Symptoms</h3>
                     </div>
@@ -121,7 +121,7 @@ export const Home = () => {
                 <div className="col-md-6 mb-4">
                     <div className="video-wrapper">
                         <div className="embed-responsive embed-responsive-16by9 rounded border">
-                            <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/RJeqcikMKAI" allowFullScreen></iframe>
+                            <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/RJeqcikMKAI" allowFullScreen style={{display: "block", margin: "0 auto", border: "1px solid #ccc" }}></iframe>
                         </div>
                         <h3 className="mt-2 mb-3 text-center" style={{marginBottom: "20px"}}>Migraine Triggers and How To Avoid Them</h3>
                     </div>
@@ -129,7 +129,7 @@ export const Home = () => {
                 <div className="col-md-6 mb-4">
                     <div className="video-wrapper">
                         <div className="embed-responsive embed-responsive-16by9 rounded border">
-                            <iframe className="embed-responsive-item" src="https://www.youtube.com/watch?v=RJeqcikMKAI&t=1s" allowFullScreen></iframe>
+                            <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/RJeqcikMKAI" allowFullScreen style={{display: "block", margin: "0 auto", border: "1px solid #ccc" }}></iframe>
                         </div>
                         <h3 className="mt-2 mb-3 text-center" style={{marginBottom: "20px"}}>Effective Treatments for Migraine Relief</h3>
                     </div>
@@ -137,7 +137,7 @@ export const Home = () => {
                 <div className="col-md-6 mb-4">
                     <div className="video-wrapper">
                         <div className="embed-responsive embed-responsive-16by9 rounded border">
-                            <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/8819ORRSMts" allowFullScreen></iframe>
+                            <iframe className="embed-responsive-item" src="https://www.youtube.com/embed/8819ORRSMts" allowFullScreen style={{ display: "block", margin: "0 auto", border: "1px solid #ccc" }}></iframe>
                         </div>
                         <h3 className="mt-2 mb-3 text-center" style={{marginBottom: "20px"}}>Living with Migraines: Tips and Strategies</h3>
                     </div>
