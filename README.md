@@ -10,10 +10,21 @@ The project was developed using the **MERN stack**:
 - **Node.js**: For running the backend server.
 
 ### Features
-1. **Book Appointments**: Users can schedule appointments with doctors, and the details are stored in a MongoDB database.
-2. **Migraine Detection Model**: Users can upload relevant data for analysis, and the model predicts the likelihood of migraines.
-3. **Resources**: Curated YouTube videos and research papers related to migraines are available for user education.
-4. **Contact Us**: A simple contact form to reach out to the team for feedback or assistance.
+1. **Book Appointments**: 
+![image](https://github.com/user-attachments/assets/35198441-130e-4847-8f41-5ad16c946a49)
+Users can schedule appointments with doctors, and the details are stored in a MongoDB database.
+
+3. **Migraine Detection Model**: 
+![image](https://github.com/user-attachments/assets/3b2f25a7-ee62-4615-af96-7130ed8c291a)
+Users can upload relevant data for analysis, and the model predicts the likelihood of migraines.
+
+4. **Resources**: 
+![image](https://github.com/user-attachments/assets/5358fc2a-2fa4-4db4-87ba-405ec1301255)
+Curated YouTube videos and research papers related to migraines are available for user education.
+
+6. **Contact Us**:
+![image](https://github.com/user-attachments/assets/60b63e76-7512-4782-bd36-ec9fcd043bbf)
+A simple contact form to reach out to the team for feedback or assistance.
 
 ---
 
