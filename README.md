@@ -1,7 +1,7 @@
 # Migrainez: Migraine Management Web Application
 
 ## Overview
-This project is a comprehensive web application designed to assist users in managing migraines. The application offers several features, including the ability to book appointments with doctors, access curated YouTube videos and research resources, use a migraine detection model, and contact the development team for support.
+This project is a comprehensive web application designed to assist users in managing migraines. The application offers several features, including booking appointments with doctors, accessing curated YouTube videos and research resources, using a migraine detection model, and contacting the development team for support.
 
 The project was developed using the **MERN stack**:
 - **MongoDB**: For storing and managing user and appointment data.
