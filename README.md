@@ -14,15 +14,15 @@ The project was developed using the **MERN stack**:
 ![image](https://github.com/user-attachments/assets/35198441-130e-4847-8f41-5ad16c946a49)
 Users can schedule appointments with doctors, and the details are stored in a MongoDB database.
 
-3. **Migraine Detection Model**: 
+2. **Migraine Detection Model**: 
 ![image](https://github.com/user-attachments/assets/3b2f25a7-ee62-4615-af96-7130ed8c291a)
 Users can upload relevant data for analysis, and the model predicts the likelihood of migraines.
 
-4. **Resources**: 
+3. **Resources**: 
 ![image](https://github.com/user-attachments/assets/5358fc2a-2fa4-4db4-87ba-405ec1301255)
 Curated YouTube videos and research papers related to migraines are available for user education.
 
-6. **Contact Us**:
+4. **Contact Us**:
 ![image](https://github.com/user-attachments/assets/60b63e76-7512-4782-bd36-ec9fcd043bbf)
 A simple contact form to reach out to the team for feedback or assistance.
 
@@ -94,6 +94,14 @@ Make sure you have the following installed:
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Migraine Detection**: Machine learning model using PyTorch TabNet (details in the main folder)
+
+---
+
+## Future Advancements
+- **Frontend**: Focus on improving the design
+- **Backend**: Add JWT to improve security
+- **Authentication**: Create profiles for medical workers and authenticate using Firebase
+- **Deploy**: Deploy the project using Vercel
 
 ---
 
