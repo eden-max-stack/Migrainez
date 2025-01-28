@@ -30,7 +30,7 @@ A simple contact form to reach out to the team for feedback or assistance.
 
 ## How to Set Up and Run the Project
 
-### Prerequisites
+### Prerequisites -
 Make sure you have the following installed:
 - **Node.js** (v14 or later)
 - **npm** or **yarn**
