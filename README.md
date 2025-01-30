@@ -20,7 +20,7 @@ Users can upload relevant data for analysis, and the model predicts the likeliho
 
 3. **Resources**: 
 ![image](https://github.com/user-attachments/assets/5358fc2a-2fa4-4db4-87ba-405ec1301255)
-Curated YouTube videos and research papers related to migraines are available for user education.
+Curated YouTube videos and research papers related to migraines are available for the user education.
 
 4. **Contact Us**:
 ![image](https://github.com/user-attachments/assets/60b63e76-7512-4782-bd36-ec9fcd043bbf)
